@@ -1,0 +1,35 @@
+.username{
+    color: darkgreen;
+    padding-bottom: 20px;
+}
+.post{
+    background-color: darkgrey;
+    border: 3px solid black;
+    padding: 3px;
+    max-width: 40%;
+    margin: 10px auto;
+}
+.own{
+    background-color: lightseagreen !important;
+    border-style: dashed !important;
+}
+.post-id{
+    float: right;
+}
+.posts-container{
+    margin: auto;
+    padding: 5px;
+    word-wrap: break-word;
+}
+button{
+    margin: auto;
+    background-color: rgba(6, 240, 29, 0.649);
+    padding: 2px;
+    border-radius: 5px;
+    border: 3px black solid;
+}
+.pagination{
+    margin: auto;
+    max-width: fit-content;
+    padding: 10px;
+}
