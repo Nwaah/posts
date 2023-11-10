@@ -28,7 +28,7 @@ Route::get('/dashboard', function () {
 
 // posts
 Route::controller(PostController::class)->group(function () {
-    Route::any('/post', 'index');
+    Route::any('/post', 'index')->name('post');
     Route::get('/post/new', 'create');
     Route::post('/post/save', function(Request $request) {
         return (new PostController())->store($request);
