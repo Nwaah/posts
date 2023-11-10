@@ -39,6 +39,9 @@ Route::controller(PostController::class)->group(function () {
     Route::get('/post/edit/{post}', function(Post $post){
         return (new PostController())->edit($post);
     });
+    Route::get('/post/delete/{post}', function (Post $post) {
+        return (new PostController())->destroy($post);
+    });
 });
 
 Route::middleware('auth')->group(function () {
