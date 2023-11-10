@@ -9,12 +9,13 @@ use Illuminate\View\Component;
 
 class Post extends Component
 {
-    public $user_id, $content, $id;
+    public $user_id, $content, $id, $user_name;
     /**
      * Create a new component instance.
      */
     public function __construct(ModelsPost $post)
     {
+        $this->user_name = $post->user->name;
         $this->user_id = $post->user_id;
         $this->content = $post->content;
         $this->id = $post->id;
