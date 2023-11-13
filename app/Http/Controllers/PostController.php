@@ -72,6 +72,9 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        if(Auth::id() == $post->user_id || Auth::user()->is_admin) {
+            $post->destroy($post->id);
+        }
+        return redirect('/post');
     }
 }
